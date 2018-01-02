@@ -18,7 +18,7 @@ class RewardsSender extends React.Component {
   constructor(props) {
     super(props);
       this.state = {
-          from:"Matan.Meshi@kenshoo.com",
+          from:"donald.trump@kenshoo.com",
           to:"",
           coinsCount:0,
           trophyType:"Good Reviewer",
@@ -34,24 +34,21 @@ class RewardsSender extends React.Component {
     sendReward(){
 
         console.log(this.state);
-        /*
-
-       const response = fetch('http://localhost:9090/rest/users/email/', {
+//http://localhost:9090/rest/users/email/?from="Matan.Meshi@kenshoo.com"&to="Matan.Meshi@kenshoo.com"&coinsCount=10&trophyType=THANKS_FOR_PATIENCE&imageUrl="https://www.mtsawards.com/Images/Content/Home/dept_cups.jpg"
+       const response = fetch('http://localhost:9090/rest/users/email/' +
+           '?from=' +this.state.from +
+           '&to='+ this.state.to +
+           '&coinsCount='+ this.state.coinsCount  +
+           '&trophyType='+ this.state.trophyType +
+           '&imageUrl='+ this.state.imageUrl, {
             method: 'POST',
             headers: {
                 'Accept': 'application/json',
                 'Content-Type': 'application/json',
             },
-            body: JSON.stringify({
-                from: "Matan.Meshi@kenshoo.com",
-                to: "Matan.Meshi@kenshoo.com",
-                coinsCount:"",
-                trophyType:"",
-                imageUrl:""
 
-            })
         })
-*/
+
     }
 
     changeEmail(event,value){
@@ -70,7 +67,7 @@ class RewardsSender extends React.Component {
               <CardHeader subtitle={"Choose a collegue"}/>
               <TextField
                   hintText="email" onChange={this.changeEmail.bind(this)}/>
-              <br />
+              <br /><br /><br />
 
               <div class="trophySelection">
                  <CardHeader subtitle={"Select a Trophy"}/>
@@ -79,14 +76,12 @@ class RewardsSender extends React.Component {
                   <TrophySelector selectTrophy={this.selectTrophy.bind(this)}></TrophySelector >
                 </div>
               </div>
-              <br />
+              <br /><br /><br />
               <CardHeader subtitle={"Reward with Kcoins"}/>
               <TextField
                   hintText="amount" onChange={this.changeKcoins.bind(this)}/>
               <span class="remaining-kcoins"> (12.75 Kcoins Remaining)</span>
-              <span onClick={this.sendReward()}>
-                  <RaisedButton label="Send" primary={true}  />
-              </span>
+
         </div>
     );
   }

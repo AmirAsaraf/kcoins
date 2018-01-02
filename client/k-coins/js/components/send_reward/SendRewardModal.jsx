@@ -35,7 +35,7 @@ class SendRewardModal extends React.Component {
     render() {
         const actions = [
             <FlatButton
-                label="Ok"
+                label="Submit"
                 primary={true}
                 keyboardFocused={true}
                 onClick={this.handleClose}
