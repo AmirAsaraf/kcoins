@@ -18,7 +18,7 @@ public class AppServerDemo {
         String [] recipients = new String[1];
         recipients[0] = "amir.asaraf@gmail.com";
 
-        String result = UserManagementService.getInstance().sendEmail("Amir Asaraf", recipients, "This is the message");
+        String result = UserManagementService.getInstance().sendEmail("Amir Asaraf", recipients, "This is the message" ,"2,45");
         System.out.println(result);
 
     }

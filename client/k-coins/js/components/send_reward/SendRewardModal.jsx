@@ -23,7 +23,8 @@ class SendRewardModal extends React.Component {
 
     state = {
         open: false,
-        from:"donald.trump@kenshoo.com",
+        from:"Donald Trump",
+        message:"",
         to:"",
         coinsCount:0,
         trophyType:"THANKS_FOR_PATIENCE",
@@ -33,6 +34,10 @@ class SendRewardModal extends React.Component {
     changeEmail(event,value){
 
         this.setState({to:value});
+    }
+
+    changeMessage(evnet,value) {
+        this.setState({message:value});
     }
 
     changeKcoins(event,value){
@@ -61,7 +66,7 @@ class SendRewardModal extends React.Component {
         const response = fetch('http://localhost:9090/rest/email' +
             '?from=' +this.state.from +
             '&to='+ this.state.to +
-            '&message='+ "Hello" +
+            '&message='+ this.state.message +
             '&coinsCount='+ this.state.coinsCount  +
             '&trophyType='+ this.state.trophyType +
             '&imageUrl='+ this.state.imageUrl, {
@@ -71,6 +76,8 @@ class SendRewardModal extends React.Component {
                 'Content-Type': 'application/json',
             },
         })
+
+        this.handleClose();
     }
 
 
@@ -96,7 +103,7 @@ class SendRewardModal extends React.Component {
                     open={this.state.open}
                     onRequestClose={this.handleClose}>
 
-                    <RewardsSender changeKcoins={this.changeKcoins.bind(this)} changeEmail={this.changeEmail.bind(this)} selectTrophy={this.selectTrophy.bind(this)}/>
+                    <RewardsSender changeKcoins={this.changeKcoins.bind(this)} changeMessage={this.changeMessage.bind(this)} changeEmail={this.changeEmail.bind(this)} selectTrophy={this.selectTrophy.bind(this)}/>
                 </Dialog>
             </div>
         );

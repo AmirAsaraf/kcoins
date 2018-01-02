@@ -42,7 +42,7 @@ class LatestRewardCard extends React.Component {
                     <img src={imageSource} alt=""/>
                     <div>{trophyTitle}</div>
                 </div>
-                <div style={message_style}><b>{to}</b> has been rewarded! <i>{message}</i></div>
+                <div style={message_style}><b>{to}</b> has been rewarded! <i>"{message}"</i></div>
             </div>
         );
 

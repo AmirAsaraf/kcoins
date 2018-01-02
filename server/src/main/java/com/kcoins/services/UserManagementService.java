@@ -67,12 +67,13 @@ public class UserManagementService {
 //    }
 
 
-    public String sendEmail(String from, String[] to, String message) {
+    public String sendEmail(String from, String[] to, String message, String coins) {
         String html = MailTemplate.MAIL_TEMPLATE
                 .replace(MailTemplate.TEMPLATE_FROM_IDENTIFYER, from)
-                .replace(MailTemplate.TEMPLATE_MESSAGE_IDENTIFYER, message);
+                .replace(MailTemplate.TEMPLATE_MESSAGE_IDENTIFYER, message)
+                .replace(MailTemplate.TEMPLATE_COINS_IDENTIFYER, coins);
 
-        return MailService.getInstance().sendMail("Congratulation you got a Kenshoo Reward", html, to);
+        return MailService.getInstance().sendMail("Congratulations you got a Kenshoo Reward", html, to);
     }
 
 }

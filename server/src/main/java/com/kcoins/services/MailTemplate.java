@@ -5,8 +5,9 @@ package com.kcoins.services;
  */
 public class MailTemplate {
 
-    public static final String TEMPLATE_FROM_IDENTIFYER       = "{{from}}";
-    public static final String TEMPLATE_MESSAGE_IDENTIFYER    = "{{message}}";
+    public static final String TEMPLATE_FROM_IDENTIFYER = "{{from}}";
+    public static final String TEMPLATE_MESSAGE_IDENTIFYER = "{{message}}";
+    public static final String TEMPLATE_COINS_IDENTIFYER = "{{coins}}";
 
     public static String MAIL_TEMPLATE = "\n" +
             "<!DOCTYPE HTML PUBLIC \"-//W3C//DTD XHTML 1.0 Transitional //EN\" \"http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd\"><html xmlns=\"http://www.w3.org/1999/xhtml\" xmlns:v=\"urn:schemas-microsoft-com:vml\" xmlns:o=\"urn:schemas-microsoft-com:office:office\"><head>\n" +
@@ -231,7 +232,7 @@ public class MailTemplate {
             "                  \n" +
             "                    <div align=\"center\" class=\"img-container center  autowidth \" style=\"padding-right: 0px;  padding-left: 0px;\">\n" +
             "<!--[if mso]><table width=\"100%\" cellpadding=\"0\" cellspacing=\"0\" border=\"0\"><tr><td style=\"padding-right: 0px; padding-left: 0px;\" align=\"center\"><![endif]-->\n" +
-            "<div style=\"line-height:25px;font-size:1px\">&#160;</div>  <img class=\"center  autowidth \" align=\"center\" border=\"0\" src=\"images/symbol.png\" alt=\"Image\" title=\"Image\" style=\"outline: none;text-decoration: none;-ms-interpolation-mode: bicubic;clear: both;display: block !important;border: 0;height: auto;float: none;width: 100%;max-width: 64px\" width=\"64\">\n" +
+            "<div style=\"line-height:25px;font-size:1px\">&#160;</div>  <img class=\"center  autowidth \" align=\"center\" border=\"0\" src=\"https://ci4.googleusercontent.com/proxy/_fe046sxVPJRyYXEVaSzpYFyre9KvlSl7X_oGgIhXrzrUHih3GOpjVALOpAwaCAj_XMPrRDNNp0ll-0I4PGz_crVW2iZkSF0ZgXnN5NFp01PLiTKkJ6B6N8k1Zz9mazkhaLtuzPKPk1nuiA_GP8=s0-d-e1-ft#https://pro-bee-template-catalog-public.s3.amazonaws.com/templates/default/37/symbol.png\" alt=\"Image\" title=\"Image\" style=\"outline: none;text-decoration: none;-ms-interpolation-mode: bicubic;clear: both;display: block !important;border: 0;height: auto;float: none;width: 100%;max-width: 64px\" width=\"64\">\n" +
             "<!--[if mso]></td></tr></table><![endif]-->\n" +
             "</div>\n" +
             "\n" +
@@ -239,7 +240,7 @@ public class MailTemplate {
             "                  \n" +
             "                    <div align=\"center\" class=\"img-container center  autowidth  fullwidth\" style=\"padding-right: 30px;  padding-left: 30px;\">\n" +
             "<!--[if mso]><table width=\"100%\" cellpadding=\"0\" cellspacing=\"0\" border=\"0\"><tr><td style=\"padding-right: 30px; padding-left: 30px;\" align=\"center\"><![endif]-->\n" +
-            "<div style=\"line-height:30px;font-size:1px\">&#160;</div>  <img class=\"center  autowidth  fullwidth\" align=\"center\" border=\"0\" src=\"images/thanks.jpg\" alt=\"Image\" title=\"Image\" style=\"outline: none;text-decoration: none;-ms-interpolation-mode: bicubic;clear: both;display: block !important;border: 0;height: auto;float: none;width: 100%;max-width: 440px\" width=\"440\">\n" +
+            "<div style=\"line-height:30px;font-size:1px\">&#160;</div>  <img class=\"center  autowidth  fullwidth\" align=\"center\" border=\"0\" src=\"https://ci6.googleusercontent.com/proxy/iRrHl8wTEW-H9AE1RKJ7iv349Q1PtIB8ejKszX5Fsn6UO79XrkHEZ3nsXvo8GhdcN14HmLV0q0jh_-hSFtiF8RcpS7r4i7MwKvsT9FMscGLQqroHX0QKUeQpchTr7mZ4TXfHZWdfH8wHUcgpW9g=s0-d-e1-ft#https://pro-bee-template-catalog-public.s3.amazonaws.com/templates/default/37/thanks.jpg\" alt=\"Image\" title=\"Image\" style=\"outline: none;text-decoration: none;-ms-interpolation-mode: bicubic;clear: both;display: block !important;border: 0;height: auto;float: none;width: 100%;max-width: 440px\" width=\"440\">\n" +
             "<div style=\"line-height:30px;font-size:1px\">&#160;</div><!--[if mso]></td></tr></table><![endif]-->\n" +
             "</div>\n" +
             "\n" +
@@ -247,7 +248,7 @@ public class MailTemplate {
             "                  \n" +
             "                    <div align=\"center\" class=\"img-container center  autowidth  fullwidth\" style=\"padding-right: 0px;  padding-left: 0px;\">\n" +
             "<!--[if mso]><table width=\"100%\" cellpadding=\"0\" cellspacing=\"0\" border=\"0\"><tr><td style=\"padding-right: 0px; padding-left: 0px;\" align=\"center\"><![endif]-->\n" +
-            "  <img class=\"center  autowidth  fullwidth\" align=\"center\" border=\"0\" src=\"images/gift-gifanimated.gif\" alt=\"Image\" title=\"Image\" style=\"outline: none;text-decoration: none;-ms-interpolation-mode: bicubic;clear: both;display: block !important;border: 0;height: auto;float: none;width: 100%;max-width: 500px\" width=\"500\">\n" +
+            "  <img class=\"center  autowidth  fullwidth\" align=\"center\" border=\"0\" src=\"https://ci5.googleusercontent.com/proxy/qtK29mExLOy2C-s1e74b3m98t-ok0QLS5vf6zuTldITiuIemVy7Vc4R0Z_Z9CBN_BfGmHESBKG7CpAix7zaHceju4pTXOsNlmUTxZaxgK-Yl-XEEzpHGu05Y1n7ESjP4FXOnrADLBY1fG8O2-6TvCvYdad4wNrJ2=s0-d-e1-ft#https://pro-bee-template-catalog-public.s3.amazonaws.com/templates/default/37/gift-gifanimated.gif\" alt=\"Image\" title=\"Image\" style=\"outline: none;text-decoration: none;-ms-interpolation-mode: bicubic;clear: both;display: block !important;border: 0;height: auto;float: none;width: 100%;max-width: 500px\" width=\"500\">\n" +
             "<!--[if mso]></td></tr></table><![endif]-->\n" +
             "</div>\n" +
             "\n" +
@@ -255,7 +256,7 @@ public class MailTemplate {
             "                  \n" +
             "                    <!--[if mso]><table width=\"100%\" cellpadding=\"0\" cellspacing=\"0\" border=\"0\"><tr><td style=\"padding-right: 30px; padding-left: 30px; padding-top: 30px; padding-bottom: 15px;\"><![endif]-->\n" +
             "<div style=\"font-family:'Montserrat', 'Trebuchet MS', 'Lucida Grande', 'Lucida Sans Unicode', 'Lucida Sans', Tahoma, sans-serif;line-height:120%;color:#555555; padding-right: 30px; padding-left: 30px; padding-top: 30px; padding-bottom: 15px;\">\t\n" +
-            "\t<div style=\"font-family:Montserrat, 'Trebuchet MS', 'Lucida Grande', 'Lucida Sans Unicode', 'Lucida Sans', Tahoma, sans-serif;font-size:12px;line-height:14px;color:#555555;text-align:left;\"><p style=\"margin: 0;font-size: 12px;line-height: 14px;text-align: center\"><span style=\"font-size: 18px; line-height: 21px;\"><strong>Congratulations!!!</strong></span></p></div>\t\n" +
+            "\t<div style=\"font-family:Montserrat, 'Trebuchet MS', 'Lucida Grande', 'Lucida Sans Unicode', 'Lucida Sans', Tahoma, sans-serif;font-size:12px;line-height:14px;color:#555555;text-align:left;\"><p style=\"margin: 0;font-size: 12px;line-height: 14px;text-align: center\"><span style=\"font-size: 18px; line-height: 21px;\"><strong>You have been rewarded by {{from}}</strong></span></p></div>\t\n" +
             "</div>\n" +
             "<!--[if mso]></td></tr></table><![endif]-->\n" +
             "\n" +
@@ -263,39 +264,15 @@ public class MailTemplate {
             "                  \n" +
             "                    <!--[if mso]><table width=\"100%\" cellpadding=\"0\" cellspacing=\"0\" border=\"0\"><tr><td style=\"padding-right: 0px; padding-left: 0px; padding-top: 0px; padding-bottom: 5px;\"><![endif]-->\n" +
             "<div style=\"font-family:'Montserrat', 'Trebuchet MS', 'Lucida Grande', 'Lucida Sans Unicode', 'Lucida Sans', Tahoma, sans-serif;line-height:120%;color:#5ACEE1; padding-right: 0px; padding-left: 0px; padding-top: 0px; padding-bottom: 5px;\">\t\n" +
-            "\t<div style=\"line-height:14px;font-size:12px;color:#5ACEE1;font-family:'Montserrat', 'Trebuchet MS', 'Lucida Grande', 'Lucida Sans Unicode', 'Lucida Sans', Tahoma, sans-serif;text-align:left;\"><p style=\"margin: 0;line-height: 14px;text-align: center;font-size: 12px\"><span style=\"font-size: 18px; line-height: 21px;\"><strong>You have been rewarded by {{from}}</strong></span></p></div>\t\n" +
+            "\t<div style=\"font-size:12px;line-height:14px;color:#5ACEE1;font-family:'Montserrat', 'Trebuchet MS', 'Lucida Grande', 'Lucida Sans Unicode', 'Lucida Sans', Tahoma, sans-serif;text-align:left;\"><p style=\"margin: 0;font-size: 12px;line-height: 14px;text-align: center\"><span style=\"font-size: 18px; line-height: 21px;\"><strong><span style=\"line-height: 21px; font-size: 18px;\">{{message}}</span></strong></span></p></div>\t\n" +
             "</div>\n" +
             "<!--[if mso]></td></tr></table><![endif]-->\n" +
             "\n" +
             "                  \n" +
             "                  \n" +
-            "                    <!--[if mso]><table width=\"100%\" cellpadding=\"0\" cellspacing=\"0\" border=\"0\"><tr><td style=\"padding-right: 10px; padding-left: 10px; padding-top: 10px; padding-bottom: 30px;\"><![endif]-->\n" +
-            "<div style=\"font-family:Arial, 'Helvetica Neue', Helvetica, sans-serif;line-height:120%;color:#989898; padding-right: 10px; padding-left: 10px; padding-top: 10px; padding-bottom: 30px;\">\t\n" +
-            "\t<div style=\"font-size:12px;line-height:14px;color:#989898;font-family:Arial, 'Helvetica Neue', Helvetica, sans-serif;text-align:left;\"><p style=\"margin: 0;font-size: 14px;line-height: 17px;text-align: center\">{{message}}</p></div>\t\n" +
-            "</div>\n" +
-            "<!--[if mso]></td></tr></table><![endif]-->\n" +
-            "\n" +
-            "                  \n" +
-            "              <!--[if (!mso)&(!IE)]><!--></div><!--<![endif]-->\n" +
-            "              </div>\n" +
-            "            </div>\n" +
-            "          <!--[if (mso)|(IE)]></td></tr></table></td></tr></table><![endif]-->\n" +
-            "        </div>\n" +
-            "      </div>\n" +
-            "    </div>    <div style=\"background-color:transparent;\">\n" +
-            "      <div style=\"Margin: 0 auto;min-width: 320px;max-width: 500px;overflow-wrap: break-word;word-wrap: break-word;word-break: break-word;background-color: transparent;\" class=\"block-grid \">\n" +
-            "        <div style=\"border-collapse: collapse;display: table;width: 100%;background-color:transparent;\">\n" +
-            "          <!--[if (mso)|(IE)]><table width=\"100%\" cellpadding=\"0\" cellspacing=\"0\" border=\"0\"><tr><td style=\"background-color:transparent;\" align=\"center\"><table cellpadding=\"0\" cellspacing=\"0\" border=\"0\" style=\"width: 500px;\"><tr class=\"layout-full-width\" style=\"background-color:transparent;\"><![endif]-->\n" +
-            "\n" +
-            "              <!--[if (mso)|(IE)]><td align=\"center\" width=\"500\" style=\" width:500px; padding-right: 0px; padding-left: 0px; padding-top:5px; padding-bottom:5px; border-top: 0px solid transparent; border-left: 0px solid transparent; border-bottom: 0px solid transparent; border-right: 0px solid transparent;\" valign=\"top\"><![endif]-->\n" +
-            "            <div class=\"col num12\" style=\"min-width: 320px;max-width: 500px;display: table-cell;vertical-align: top;\">\n" +
-            "              <div style=\"background-color: transparent; width: 100% !important;\">\n" +
-            "              <!--[if (!mso)&(!IE)]><!--><div style=\"border-top: 0px solid transparent; border-left: 0px solid transparent; border-bottom: 0px solid transparent; border-right: 0px solid transparent; padding-top:5px; padding-bottom:5px; padding-right: 0px; padding-left: 0px;\"><!--<![endif]-->\n" +
-            "\n" +
-            "                  \n" +
-            "                    <!--[if mso]><table width=\"100%\" cellpadding=\"0\" cellspacing=\"0\" border=\"0\"><tr><td style=\"padding-right: 10px; padding-left: 10px; padding-top: 10px; padding-bottom: 10px;\"><![endif]-->\n" +
-            "<div style=\"color:#555555;line-height:120%;font-family:Arial, 'Helvetica Neue', Helvetica, sans-serif; padding-right: 10px; padding-left: 10px; padding-top: 10px; padding-bottom: 10px;\">\t\n" +
-            "\t<div style=\"font-size:12px;line-height:14px;color:#555555;font-family:Arial, 'Helvetica Neue', Helvetica, sans-serif;text-align:left;\"><p style=\"margin: 0;font-size: 14px;line-height: 17px;text-align: center\"><span style=\"color: rgb(128, 128, 128); font-size: 14px; line-height: 16px;\">Powered by KCoins - Kenshoo Rewards System</span></p></div>\t\n" +
+            "                    <!--[if mso]><table width=\"100%\" cellpadding=\"0\" cellspacing=\"0\" border=\"0\"><tr><td style=\"padding-right: 30px; padding-left: 30px; padding-top: 10px; padding-bottom: 15px;\"><![endif]-->\n" +
+            "<div style=\"font-family:'Montserrat', 'Trebuchet MS', 'Lucida Grande', 'Lucida Sans Unicode', 'Lucida Sans', Tahoma, sans-serif;line-height:120%;color:#555555; padding-right: 30px; padding-left: 30px; padding-top: 10px; padding-bottom: 15px;\">\t\n" +
+            "\t<div style=\"font-family:Montserrat, 'Trebuchet MS', 'Lucida Grande', 'Lucida Sans Unicode', 'Lucida Sans', Tahoma, sans-serif;font-size:12px;line-height:14px;color:#555555;text-align:left;\"><p style=\"margin: 0;font-size: 12px;line-height: 14px;text-align: center\"><span style=\"font-size: 18px; line-height: 21px;\"><strong>You also got {{coins}} KCoins :)</strong></span></p></div>\t\n" +
             "</div>\n" +
             "<!--[if mso]></td></tr></table><![endif]-->\n" +
             "\n" +
@@ -353,39 +330,14 @@ public class MailTemplate {
             "\n" +
             "                  \n" +
             "                    \n" +
-            "<div align=\"center\" style=\"padding-right: 25px; padding-left: 25px; padding-bottom: 25px;\">\n" +
-            "  <div style=\"line-height:25px;font-size:1px\">&#160;</div>\n" +
-            "  <div style=\"display: table; max-width:191px;\">\n" +
-            "  <!--[if (mso)|(IE)]><table width=\"141\" cellpadding=\"0\" cellspacing=\"0\" border=\"0\"><tr><td style=\"border-collapse:collapse; padding-right: 25px; padding-left: 25px; padding-bottom: 25px;\"  align=\"center\"><table width=\"100%\" cellpadding=\"0\" cellspacing=\"0\" border=\"0\" style=\"border-collapse:collapse; mso-table-lspace: 0pt;mso-table-rspace: 0pt; width:141px;\"><tr><td width=\"32\" style=\"width:32px; padding-right: 10px;\" valign=\"top\"><![endif]-->\n" +
-            "    <table align=\"left\" border=\"0\" cellspacing=\"0\" cellpadding=\"0\" width=\"32\" height=\"32\" style=\"border-collapse: collapse;table-layout: fixed;border-spacing: 0;mso-table-lspace: 0pt;mso-table-rspace: 0pt;vertical-align: top;Margin-right: 10px\">\n" +
-            "      <tbody><tr style=\"vertical-align: top\"><td align=\"left\" valign=\"middle\" style=\"word-break: break-word;border-collapse: collapse !important;vertical-align: top\">\n" +
-            "        <a href=\"https://www.facebook.com/\" title=\"Facebook\" target=\"_blank\">\n" +
-            "          <img src=\"images/facebook@2x.png\" alt=\"Facebook\" title=\"Facebook\" width=\"32\" style=\"outline: none;text-decoration: none;-ms-interpolation-mode: bicubic;clear: both;display: block !important;border: none;height: auto;float: none;max-width: 32px !important\">\n" +
-            "        </a>\n" +
-            "      <div style=\"line-height:5px;font-size:1px\">&#160;</div>\n" +
-            "      </td></tr>\n" +
-            "    </tbody></table>\n" +
-            "      <!--[if (mso)|(IE)]></td><td width=\"32\" style=\"width:32px; padding-right: 10px;\" valign=\"top\"><![endif]-->\n" +
-            "    <table align=\"left\" border=\"0\" cellspacing=\"0\" cellpadding=\"0\" width=\"32\" height=\"32\" style=\"border-collapse: collapse;table-layout: fixed;border-spacing: 0;mso-table-lspace: 0pt;mso-table-rspace: 0pt;vertical-align: top;Margin-right: 10px\">\n" +
-            "      <tbody><tr style=\"vertical-align: top\"><td align=\"left\" valign=\"middle\" style=\"word-break: break-word;border-collapse: collapse !important;vertical-align: top\">\n" +
-            "        <a href=\"https://twitter.com/\" title=\"Twitter\" target=\"_blank\">\n" +
-            "          <img src=\"images/twitter@2x.png\" alt=\"Twitter\" title=\"Twitter\" width=\"32\" style=\"outline: none;text-decoration: none;-ms-interpolation-mode: bicubic;clear: both;display: block !important;border: none;height: auto;float: none;max-width: 32px !important\">\n" +
-            "        </a>\n" +
-            "      <div style=\"line-height:5px;font-size:1px\">&#160;</div>\n" +
-            "      </td></tr>\n" +
-            "    </tbody></table>\n" +
-            "      <!--[if (mso)|(IE)]></td><td width=\"32\" style=\"width:32px; padding-right: 0;\" valign=\"top\"><![endif]-->\n" +
-            "    <table align=\"left\" border=\"0\" cellspacing=\"0\" cellpadding=\"0\" width=\"32\" height=\"32\" style=\"border-collapse: collapse;table-layout: fixed;border-spacing: 0;mso-table-lspace: 0pt;mso-table-rspace: 0pt;vertical-align: top;Margin-right: 0\">\n" +
-            "      <tbody><tr style=\"vertical-align: top\"><td align=\"left\" valign=\"middle\" style=\"word-break: break-word;border-collapse: collapse !important;vertical-align: top\">\n" +
-            "        <a href=\"https://plus.google.com/\" title=\"Google+\" target=\"_blank\">\n" +
-            "          <img src=\"images/googleplus@2x.png\" alt=\"Google+\" title=\"Google+\" width=\"32\" style=\"outline: none;text-decoration: none;-ms-interpolation-mode: bicubic;clear: both;display: block !important;border: none;height: auto;float: none;max-width: 32px !important\">\n" +
-            "        </a>\n" +
-            "      <div style=\"line-height:5px;font-size:1px\">&#160;</div>\n" +
-            "      </td></tr>\n" +
-            "    </tbody></table>\n" +
-            "    <!--[if (mso)|(IE)]></td></tr></table></td></tr></table><![endif]-->\n" +
-            "  </div>\n" +
+            "<div align=\"center\" class=\"button-container center\" style=\"padding-right: 10px; padding-left: 10px; padding-top:10px; padding-bottom:10px;\">\n" +
+            "  <!--[if mso]><table width=\"100%\" cellpadding=\"0\" cellspacing=\"0\" border=\"0\" style=\"border-spacing: 0; border-collapse: collapse; mso-table-lspace:0pt; mso-table-rspace:0pt;\"><tr><td style=\"padding-right: 10px; padding-left: 10px; padding-top:10px; padding-bottom:10px;\" align=\"center\"><v:roundrect xmlns:v=\"urn:schemas-microsoft-com:vml\" xmlns:w=\"urn:schemas-microsoft-com:office:word\" href=\"\" style=\"height:31pt; v-text-anchor:middle; width:73pt;\" arcsize=\"10%\" strokecolor=\"#3AAEE0\" fillcolor=\"#3AAEE0\"><w:anchorlock/><v:textbox inset=\"0,0,0,0\"><center style=\"color:#ffffff; font-family:Arial, 'Helvetica Neue', Helvetica, sans-serif; font-size:16px;\"><![endif]-->\n" +
+            "    <div style=\"color: #ffffff; background-color: #3AAEE0; border-radius: 4px; -webkit-border-radius: 4px; -moz-border-radius: 4px; max-width: 98px; width: 58px;width: auto; border-top: 0px solid transparent; border-right: 0px solid transparent; border-bottom: 0px solid transparent; border-left: 0px solid transparent; padding-top: 5px; padding-right: 20px; padding-bottom: 5px; padding-left: 20px; font-family: Arial, 'Helvetica Neue', Helvetica, sans-serif; text-align: center; mso-border-alt: none;\">\n" +
+            "      <span style=\"font-size:16px;line-height:32px;\">Go to KCoins System</span>\n" +
+            "    </div>\n" +
+            "  <!--[if mso]></center></v:textbox></v:roundrect></td></tr></table><![endif]-->\n" +
             "</div>\n" +
+            "\n" +
             "                  \n" +
             "              <!--[if (!mso)&(!IE)]><!--></div><!--<![endif]-->\n" +
             "              </div>\n" +

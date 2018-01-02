@@ -13,8 +13,8 @@ public class MailService {
 
     private static MailService mailService                      = null;
 
-    public static final String SENDGRID_API_KEY                 = "";
-    public static final String FROM                             = "do-not-reply@kenshoo.com";
+    public static final String SENDGRID_API_KEY                 = "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";
+    public static final String FROM                             = "kcoins@kenshoo.com";
 
     public static MailService getInstance() {
         if (mailService == null) {

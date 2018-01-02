@@ -92,25 +92,6 @@ public class UserResource {
         }
     }
 
-    @POST
-    @Path("/email")
-    @Produces(MediaType.APPLICATION_JSON)
-    public Response  sendEmail(@QueryParam("from") String from,
-                               @QueryParam("to") String to,
-                               @QueryParam("message") String message,
-                               @QueryParam("coinsCount") int coinsCount,
-                               @QueryParam("trophyType") String trophyType,
-                               @QueryParam("imageUrl") String imageUrl){
-
-        String [] recipients = new String[1];
-        recipients[0] = "amir.asaraf@gmail.com";
-
-        String result = UserManagementService.getInstance().sendEmail("Amir Asaraf", recipients, "This is the message");
-
-        return Response.status(200).entity(result).header("Access-Control-Allow-Origin", "*").build();
-    }
-
-
     @GET
     @Path("/user")
     @Produces(MediaType.APPLICATION_JSON)
