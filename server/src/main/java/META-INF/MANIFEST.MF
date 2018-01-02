@@ -1,0 +1,18 @@
+Manifest-Version: 1.0
+Class-Path: commons-logging-1.1.3.jar jetty-servlet-8.0.4.v20111024.ja
+ r mongo-java-driver-2.11.0.jar jsp-api-2.1-glassfish-2.1.v20100127.ja
+ r ecj-3.5.1.jar stax-api-1.0-2.jar log4j-1.2.17.jar jetty-webapp-8.0.
+ 4.v20111024.jar ant-1.6.5.jar jetty-xml-8.0.4.v20111024.jar morphia-0
+ .105.jar jersey-server-1.17.1.jar asm-3.1.jar slf4j-log4j12-1.6.4.jar
+  jsr311-api-1.1.1.jar jetty-io-8.0.4.v20111024.jar jersey-json-1.17.1
+ .jar jetty-http-8.0.4.v20111024.jar jackson-jaxrs-1.9.2.jar jetty-ser
+ ver-8.0.4.v20111024.jar jackson-xc-1.9.2.jar jersey-core-1.17.1.jar c
+ ommons-codec-1.6.jar jaxb-impl-2.2.3-1.jar httpclient-4.3.2.jar servl
+ et-api-3.0.20100224.jar httpcore-4.3.1.jar jaxb-api-2.2.2.jar jackson
+ -mapper-asl-1.9.2.jar jettison-1.1.jar jsp-2.1-glassfish-2.1.v2010012
+ 7.jar jersey-servlet-1.17.1.jar jetty-security-8.0.4.v20111024.jar ma
+ il-1.4.jar activation-1.1.jar slf4j-api-1.6.4.jar json-simple-1.1.jar
+  jetty-util-8.0.4.v20111024.jar jackson-core-asl-1.9.2.jar jetty-cont
+ inuation-8.0.4.v20111024.jar gson-2.3.1.jar
+Main-Class: com.kcoins.AppServer
+
