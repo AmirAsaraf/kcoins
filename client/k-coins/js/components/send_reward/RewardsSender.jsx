@@ -1,9 +1,11 @@
 'use strict';
 
 import React from 'react';
+import Fetch from 'react-fetch'
 import { Card, CardActions, CardHeader, CardTitle, CardText } from 'material-ui/Card';
 import RaisedButton from 'material-ui/RaisedButton';
 import TrophySelector from './TrophySelector.jsx';
+import TextField from 'material-ui/TextField';
 
 import _ from 'lodash';
 import UI from 'js/fw/lib/UI';
@@ -11,28 +13,60 @@ import UI from 'js/fw/lib/UI';
 
 class RewardsSender extends React.Component {
 
+
+
   constructor(props) {
     super(props);
       this.state = {
-          selectedTrophy:'aaaa'
+          from:"",
+          to:"",
+          coinsCount:0,
+          trophyType:"",
+          imageUrl:""
       };
   }
 
+
+
+
     selectTrophy(newTrophy){
-        this.setState({selectedTrophy:newTrophy});
+
+        this.setState({imageUrl:newTrophy});
+
+    }
+
+    sendReward(){
+
+        /*
+
+       const response = fetch('http://localhost:9090/rest/users/email/', {
+            method: 'POST',
+            headers: {
+                'Accept': 'application/json',
+                'Content-Type': 'application/json',
+            },
+            body: JSON.stringify({
+                from: "Matan.Meshi@kenshoo.com",
+                to: "Matan.Meshi@kenshoo.com",
+                coinsCount:"",
+                trophyType:"",
+                imageUrl:""
+
+            })
+        })
+*/
     }
 
   render() {
 
-    const { title, subtitle, content } = this.props
-
     return (
 
         <div>
-          <form action="#" method="get">
               <CardHeader subtitle={"Choose a collegue"}/>
-              <input type="email" name="email" placeholder="email"/>
-              <input type="text" name="selectedTrophy" value={this.state.selectedTrophy} hidden/>
+              <TextField
+                  hintText="email"/>
+              <br />
+
               <div class="trophySelection">
                  <CardHeader subtitle={"Select a Trophy"}/>
                   <div class="trophy-box" >
@@ -40,15 +74,14 @@ class RewardsSender extends React.Component {
                   <TrophySelector selectTrophy={this.selectTrophy.bind(this)}></TrophySelector >
                 </div>
               </div>
+              <br />
               <CardHeader subtitle={"Reward with Kcoins"}/>
-              <input type="text" name="coins" placeholder="Reward Amount"/>
+              <TextField
+                  hintText="email"/>
               <span class="remaining-kcoins"> (12.75 Kcoins Remaining)</span>
-
-          </form>
-
-
-
-          <RaisedButton label="Send" primary={true}  />
+              <span onClick={this.sendReward()}>
+                  <RaisedButton label="Send" primary={true}  />
+              </span>
         </div>
     );
   }

@@ -101,6 +101,7 @@ public class UserResource {
                                @QueryParam("coinsCount") int coinsCount,
                                @QueryParam("trophyType") String trophyType,
                                @QueryParam("imageUrl") String imageUrl){
+        System.out.print("from "  +from);
         String result =  UserManagementService.getInstance().sendEmail(from,to,message,coinsCount,trophyType,imageUrl);
         return Response.status(200).entity(result).header("Access-Control-Allow-Origin", "*").build();
     }
