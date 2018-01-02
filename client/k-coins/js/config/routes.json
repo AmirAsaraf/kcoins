@@ -1,6 +1,10 @@
 {
   "index": {
-    "path":  "/",
-    "label": "Index"
+    "path": "/",
+    "label": "Latest Rewards"
+  },
+  "myRewards": {
+    "path": "/myRewards",
+    "label": "My Rewards"
   }
 }

@@ -59,7 +59,7 @@ class MyDrawer extends React.Component {
         >
           <Toolbar style={drawerNavStyle}>
             <ToolbarGroup>
-              <ToolbarTitle style={{color: this.context.muiTheme.palette.alternateTextColor}} text="Navbar" />
+              <ToolbarTitle style={{color: this.context.muiTheme.palette.alternateTextColor}} text="Menu" />
             </ToolbarGroup>
           </Toolbar>
 
