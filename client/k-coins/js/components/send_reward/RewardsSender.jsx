@@ -25,40 +25,11 @@ class RewardsSender extends React.Component {
           imageUrl:""
       };
   }
-    selectTrophy(newTrophy){
 
-        this.setState({imageUrl:newTrophy});
 
-    }
 
-    sendReward(){
 
-        console.log(this.state);
-//http://localhost:9090/rest/users/email/?from="Matan.Meshi@kenshoo.com"&to="Matan.Meshi@kenshoo.com"&coinsCount=10&trophyType=THANKS_FOR_PATIENCE&imageUrl="https://www.mtsawards.com/Images/Content/Home/dept_cups.jpg"
-       const response = fetch('http://localhost:9090/rest/users/email/' +
-           '?from=' +this.state.from +
-           '&to='+ this.state.to +
-           '&coinsCount='+ this.state.coinsCount  +
-           '&trophyType='+ this.state.trophyType +
-           '&imageUrl='+ this.state.imageUrl, {
-            method: 'POST',
-            headers: {
-                'Accept': 'application/json',
-                'Content-Type': 'application/json',
-            },
 
-        })
-
-    }
-
-    changeEmail(event,value){
-
-        this.setState({to:value});
-    }
-
-    changeKcoins(event,value){
-        this.setState({coinsCount:value});
-    }
   render() {
 
     return (
@@ -66,20 +37,20 @@ class RewardsSender extends React.Component {
         <div>
               <CardHeader subtitle={"Choose a collegue"}/>
               <TextField
-                  hintText="email" onChange={this.changeEmail.bind(this)}/>
+                  hintText="email" onChange={this.props.changeEmail}/>
               <br /><br /><br />
 
               <div class="trophySelection">
                  <CardHeader subtitle={"Select a Trophy"}/>
                   <div class="trophy-box" >
 
-                  <TrophySelector selectTrophy={this.selectTrophy.bind(this)}></TrophySelector >
+                  <TrophySelector selectTrophy={this.props.selectTrophy}></TrophySelector >
                 </div>
               </div>
               <br /><br /><br />
               <CardHeader subtitle={"Reward with Kcoins"}/>
               <TextField
-                  hintText="amount" onChange={this.changeKcoins.bind(this)}/>
+                  hintText="amount" onChange={this.props.changeKcoins}/>
               <span class="remaining-kcoins"> (12.75 Kcoins Remaining)</span>
 
         </div>
