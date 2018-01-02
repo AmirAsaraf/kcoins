@@ -6,6 +6,8 @@ import com.sun.jersey.api.NotFoundException;
 import org.apache.log4j.LogManager;
 import org.apache.log4j.Logger;
 
+import java.io.File;
+
 public class UserManagementService {
 
     private static UserManagementService userManagementService = null;
@@ -38,22 +40,39 @@ public class UserManagementService {
         return null;
     }
 
-    public String getEmailHtml(String from, String to, String message, int coinsCount, String imageUrl) {
-        return null;
+
+//    public String getEmailHtml(String from, String to, String message, int coinsCount, String imageUrl) {
+//        try{
+//
+//            File file = new File("mail_preview.html");
+//            Document doc = Jsoup.parse(file, "UTF-8", "");
+//            Element dummy_to = doc.getElementById("to");
+//            dummy_to.text(to);
+//            Element dummy_from = doc.getElementById("from");
+//            dummy_from.text(from);
+//            Element dummy_msg = doc.getElementById("message");
+//            dummy_msg.text(message);
+//            String congrats = "Congratulations!!!! You won " + coinsCount +" Kcoins";
+//            Element dummy_Kcoins = doc.getElementById("kcoins");
+//            dummy_Kcoins.text(congrats);
+//            Element dummy_img_url = doc.getElementById("img");
+//            dummy_img_url.attr("src", imageUrl);
+//            String safe = Jsoup.clean(doc.outerHtml(), Whitelist.basic());
+//            return safe;
+//        }
+//        catch (IOException ex)
+//        {
+//            return ex.getMessage();
+//        }
+//    }
+
+
+    public String sendEmail(String from, String[] to, String message) {
+        String html = MailTemplate.MAIL_TEMPLATE
+                .replace(MailTemplate.TEMPLATE_FROM_IDENTIFYER, from)
+                .replace(MailTemplate.TEMPLATE_MESSAGE_IDENTIFYER, message);
+
+        return MailService.getInstance().sendMail("Congratulation you got a Kenshoo Reward", html, to);
     }
-
-    public String sendEmail(String from, String to, String message, int coinsCount, String trophyType, String imageUrl) {
-        String html = getEmailHtml(from, to, message, coinsCount, imageUrl);
-        UserTrophyManager.getInstance().addTrophyToUser(to, TrophyType.valueOf(trophyType), coinsCount);
-        // String dummyHtml = "<div> test</div>";
-
-        return MailService.getInstance().sendMail("Congratulation you WON Kenshoo trophy", "kenshoo trophy", html, to);
-    }
-
-    public static void main(String[] args) {
-        String result = UserManagementService.getInstance().sendEmail("atara.tenne@gmail.com", "atara.tenne@gmail.com", "hackaton test", 5, TrophyType.BUGS_TERMINATOR.name(), "www.imageUrl.com");
-        System.out.println("aa");
-    }
-
 
 }

@@ -42,7 +42,7 @@ class TabsContainer extends React.Component {
                     icon={<MapsLocalActivity />}
                     label="My Rewards"
                 >
-                    <MyRewardCard from="Bibi Nenatanyahu" trophyTitle="Best Hair Cut" message="Love your hair cut! Sarah too :)" trophyIndex="3"/>
+                    <MyRewardCard from="Bibi Nenatanyahu" trophyTitle="Best Hair Cut" message="Love your hair cut! Sarah too :)" trophyIndex="3" kcoins="2.45"/>
                 </Tab>
             </Tabs>
         );

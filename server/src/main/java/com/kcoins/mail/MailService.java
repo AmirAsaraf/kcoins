@@ -13,8 +13,8 @@ public class MailService {
 
     private static MailService mailService                      = null;
 
-    public static final String SENDGRID_API_KEY                 = "dummy";
-    public static final String FROM                             = "kcoins@kenshoo.com";
+    public static final String SENDGRID_API_KEY                 = "";
+    public static final String FROM                             = "do-not-reply@kenshoo.com";
 
     public static MailService getInstance() {
         if (mailService == null) {
@@ -23,11 +23,11 @@ public class MailService {
         return mailService;
     }
 
-    public String sendMail(String subject, String title, String content, String... to) {
+    public String sendMail(String subject, String content, String... to) {
         SendGrid sendgrid = new SendGrid(SENDGRID_API_KEY);
         SendGrid.Email email = new SendGrid.Email();
 
-        email.setHtml("<div>Test Mail<div/>");
+        email.setHtml(content);
 
         email.setSubject(subject);
         email.setTo(to);

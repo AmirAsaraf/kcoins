@@ -2,6 +2,7 @@
 
 import React from "react";
 import {Card} from "material-ui";
+import {ActionCopyright} from "material-ui/svg-icons/index";
 
 const card_media_style = {
     width: 60,
@@ -22,6 +23,14 @@ const message_style = {
     margin: 10,
 };
 
+const image_style = {
+  paddingTop: 10
+};
+
+const coin_color = {
+    color: "rgba(0, 0, 0, 0.54)"
+};
+
 class MyRewardCard extends React.Component {
 
     constructor(props) {
@@ -30,7 +39,7 @@ class MyRewardCard extends React.Component {
 
     render() {
 
-        const {from, trophyTitle, message, trophyIndex } = this.props;
+        const {from, trophyTitle, message, trophyIndex, kcoins } = this.props;
 
         let imageSource = 'http://dogdayzz.com/images/theme-none/awards/' + trophyIndex + '.png';
 
@@ -40,7 +49,7 @@ class MyRewardCard extends React.Component {
                     <img src={imageSource} alt=""/>
                     <div>{trophyTitle}</div>
                 </div>
-                <div style={message_style}>You have been rewarded by <b>{from}</b>! This is what he said about you: <i>{message}</i></div>
+                <div style={message_style}>You have been rewarded by <b>{from}</b>! This is what he said about you: <i>"{message}". </i><br/>You got <b>{kcoins}</b> KCoins</div>
                 </div>
             );
 

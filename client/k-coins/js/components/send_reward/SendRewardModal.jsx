@@ -50,17 +50,18 @@ class SendRewardModal extends React.Component {
 
     handleClose = () => {
         this.setState({open: false});
+    };
+
+    handleSendReward = () => {
         this.sendReward();
     };
 
 
     sendReward(){
-
-        console.log(this.state);
-//http://localhost:9090/rest/users/email/?from="Matan.Meshi@kenshoo.com"&to="Matan.Meshi@kenshoo.com"&coinsCount=10&trophyType=THANKS_FOR_PATIENCE&imageUrl="https://www.mtsawards.com/Images/Content/Home/dept_cups.jpg"
-        const response = fetch('http://localhost:9090/rest/users/email/' +
+        const response = fetch('http://localhost:9090/rest/email' +
             '?from=' +this.state.from +
             '&to='+ this.state.to +
+            '&message='+ "Hello" +
             '&coinsCount='+ this.state.coinsCount  +
             '&trophyType='+ this.state.trophyType +
             '&imageUrl='+ this.state.imageUrl, {
@@ -69,19 +70,17 @@ class SendRewardModal extends React.Component {
                 'Accept': 'application/json',
                 'Content-Type': 'application/json',
             },
-
         })
-
     }
 
 
     render() {
         const actions = [
             <FlatButton
-                label="Submit"
+                label="Send"
                 primary={true}
                 keyboardFocused={true}
-                onClick={this.handleClose}
+                onClick={this.handleSendReward}
             />,
         ];
 
@@ -91,7 +90,7 @@ class SendRewardModal extends React.Component {
                     <ActionThumbUp />
                 </FloatingActionButton>
                 <Dialog
-                    title="Reward a collegue"
+                    title="Send Reward"
                     actions={actions}
                     modal={false}
                     open={this.state.open}

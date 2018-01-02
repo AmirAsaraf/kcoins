@@ -1,61 +1,65 @@
 'use strict';
 
-import React from 'react';
-import Fetch from 'react-fetch'
-import { Card, CardActions, CardHeader, CardTitle, CardText } from 'material-ui/Card';
-import RaisedButton from 'material-ui/RaisedButton';
-import TrophySelector from './TrophySelector.jsx';
-import TextField from 'material-ui/TextField';
+import React from "react";
+import TrophySelector from "./TrophySelector.jsx";
+import TextField from "material-ui/TextField";
+import {ActionCopyright} from "material-ui/svg-icons/index";
 
-import _ from 'lodash';
-import UI from 'js/fw/lib/UI';
+const trophy_section_style = {
+    display: "inline-flex",
+    marginTop: 10
+};
+
+const trophy_selection_style = {
+    display: "inline-flex",
+    margin: 10
+};
+
+const coin_color = {
+    marginTop: 10,
+    color: "rgba(0, 0, 0, 0.54)"
+};
+
+const copyright_style = {
+    marginTop: 27,
+    marginRight: 3
+}
 
 
 class RewardsSender extends React.Component {
 
 
-
-  constructor(props) {
-    super(props);
-      this.state = {
-          from:"donald.trump@kenshoo.com",
-          to:"",
-          coinsCount:0,
-          trophyType:"Good Reviewer",
-          imageUrl:""
-      };
-  }
-
+    constructor(props) {
+        super(props);
+        this.state = {
+            from: "donald.trump@kenshoo.com",
+            to: "",
+            coinsCount: 0,
+            trophyType: "Good Reviewer",
+            imageUrl: ""
+        };
+    }
 
 
+    render() {
 
+        return (
 
-  render() {
-
-    return (
-
-        <div>
-              <CardHeader subtitle={"Choose a collegue"}/>
-              <TextField
-                  hintText="email" onChange={this.props.changeEmail}/>
-              <br /><br /><br />
-
-              <div class="trophySelection">
-                 <CardHeader subtitle={"Select a Trophy"}/>
-                  <div class="trophy-box" >
-
-                  <TrophySelector selectTrophy={this.props.selectTrophy}></TrophySelector >
+            <div>
+                <TextField floatingLabelText="Recipient mail" onChange={this.props.changeEmail}/>
+                <div style={trophy_section_style}>
+                    <div>Select a Trophy</div>
+                    <div style={trophy_selection_style}>
+                        <TrophySelector selectTrophy={this.props.selectTrophy}></TrophySelector >
+                    </div>
                 </div>
-              </div>
-              <br /><br /><br />
-              <CardHeader subtitle={"Reward with Kcoins"}/>
-              <TextField
-                  hintText="amount" onChange={this.props.changeKcoins}/>
-              <span class="remaining-kcoins"> (12.75 Kcoins Remaining)</span>
-
-        </div>
-    );
-  }
+                <div style={trophy_section_style}>
+                    <div style={copyright_style}><ActionCopyright style={coin_color}/></div>
+                    <TextField floatingLabelText="KCoins amount" onChange={this.props.changeKcoins}/>
+                </div>
+            </div>
+        );
+    }
 }
 
 export default RewardsSender;

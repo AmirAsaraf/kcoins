@@ -43,7 +43,7 @@ Object.keys(routes).map(requireComponents, routes);
 
 
 const AppRoutes = (
-  <Route path="/" component={Application} title={'KCoins'}>
+  <Route path="/" component={Application} title={'KCoins - Kenshoo Reward System'}>
     {Object.keys(routes).map(generateRoutes, routes)}
     <IndexRoute component={Index} />
   </Route>
