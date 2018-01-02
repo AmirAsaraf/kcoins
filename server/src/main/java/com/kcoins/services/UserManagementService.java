@@ -37,4 +37,12 @@ public class UserManagementService {
     public User createUser(User user) throws NotFoundException,SecurityException{
        return null;
     }
+
+    public String getEmailHtml(String from,String to,String message,int coinsCount,String imageUrl){
+        return  null;
+    }
+
+    public Boolean sendEmail(String from, String to, String message, int coinsCount, String imageUrl) {
+        return null;
+    }
 }

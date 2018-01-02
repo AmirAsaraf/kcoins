@@ -89,4 +89,11 @@ public class UserResource {
             return Response.status(500).header("Access-Control-Allow-Origin", "*").build();
         }
     }
+    
+    //send an email
+    Boolean sendEmail(String from,String to,String message,int coinsCount,String imageUrl){
+        return UserManagementService.getInstance().sendEmail(from,to,message,coinsCount,imageUrl);
+    }
+    
+    
 }
