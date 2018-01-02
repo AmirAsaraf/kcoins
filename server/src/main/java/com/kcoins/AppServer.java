@@ -19,7 +19,7 @@ public class AppServer {
     public static void main(String[] args) throws Exception {
 
         try {
-            Server server = new Server(8080);
+            Server server = new Server(9090);
 
             WebAppContext context = new WebAppContext();
             context.setDescriptor(WEB_XML);
