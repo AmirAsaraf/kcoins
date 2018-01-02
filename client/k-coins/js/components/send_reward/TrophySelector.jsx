@@ -51,8 +51,6 @@ class TrophySelector extends React.Component {
     constructor(props) {
         super(props);
 
-
-
     }
 
     handleTrophySelection(e){

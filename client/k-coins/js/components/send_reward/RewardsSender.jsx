@@ -18,17 +18,13 @@ class RewardsSender extends React.Component {
   constructor(props) {
     super(props);
       this.state = {
-          from:"",
+          from:"Matan.Meshi@kenshoo.com",
           to:"",
           coinsCount:0,
-          trophyType:"",
+          trophyType:"Good Reviewer",
           imageUrl:""
       };
   }
-
-
-
-
     selectTrophy(newTrophy){
 
         this.setState({imageUrl:newTrophy});
@@ -37,6 +33,7 @@ class RewardsSender extends React.Component {
 
     sendReward(){
 
+        console.log(this.state);
         /*
 
        const response = fetch('http://localhost:9090/rest/users/email/', {
@@ -57,6 +54,14 @@ class RewardsSender extends React.Component {
 */
     }
 
+    changeEmail(event,value){
+
+        this.setState({to:value});
+    }
+
+    changeKcoins(event,value){
+        this.setState({coinsCount:value});
+    }
   render() {
 
     return (
@@ -64,7 +69,7 @@ class RewardsSender extends React.Component {
         <div>
               <CardHeader subtitle={"Choose a collegue"}/>
               <TextField
-                  hintText="email"/>
+                  hintText="email" onChange={this.changeEmail.bind(this)}/>
               <br />
 
               <div class="trophySelection">
@@ -77,7 +82,7 @@ class RewardsSender extends React.Component {
               <br />
               <CardHeader subtitle={"Reward with Kcoins"}/>
               <TextField
-                  hintText="email"/>
+                  hintText="amount" onChange={this.changeKcoins.bind(this)}/>
               <span class="remaining-kcoins"> (12.75 Kcoins Remaining)</span>
               <span onClick={this.sendReward()}>
                   <RaisedButton label="Send" primary={true}  />
