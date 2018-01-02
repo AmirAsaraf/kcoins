@@ -6,8 +6,8 @@ import FlatButton from 'material-ui/FlatButton';
 import RaisedButton from 'material-ui/RaisedButton';
 import DatePicker from 'material-ui/DatePicker';
 import {FloatingActionButton} from "material-ui";
-import {ActionThumbUp} from "material-ui/svg-icons/index";
-
+import {ActionThumbUp, ContentAdd} from "material-ui/svg-icons/index";
+import RewardsSender from './RewardsSender.jsx'
 const style = {
     position: "absolute",
     right: 20,
@@ -48,13 +48,13 @@ class SendRewardModal extends React.Component {
                     <ActionThumbUp />
                 </FloatingActionButton>
                 <Dialog
-                    title="Dialog With Date Picker"
+                    title="Reward a collegue"
                     actions={actions}
                     modal={false}
                     open={this.state.open}
                     onRequestClose={this.handleClose}>
-                    Open a Date Picker dialog from within a dialog.
-                    <DatePicker hintText="Date Picker"/>
+
+                    <RewardsSender/>
                 </Dialog>
             </div>
         );

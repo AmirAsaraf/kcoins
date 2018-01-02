@@ -1,0 +1,17 @@
+.trophy-box{
+    display: flex;
+    flex-wrap: nowrap;
+    border-style: solid;
+    border-width: 5px;
+}
+
+.submit-image{
+    width: 100px;
+}
+
+.trophy-holder:hover{
+
+    /*todo*/
+    border-style: solid;
+    border-width: 5px;
+}
