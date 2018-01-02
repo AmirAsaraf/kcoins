@@ -89,10 +89,17 @@ public class UserResource {
             return Response.status(500).header("Access-Control-Allow-Origin", "*").build();
         }
     }
-    
-    //send an email
-    Boolean sendEmail(String from,String to,String message,int coinsCount,String imageUrl){
-        return UserManagementService.getInstance().sendEmail(from,to,message,coinsCount,imageUrl);
+
+    @PUT
+    @Path("/email")
+    @Produces(MediaType.APPLICATION_JSON)
+    public Response  sendEmail(@QueryParam("from") String from,
+                               @QueryParam("to") String to,
+                               @QueryParam("message") String message,
+                               @QueryParam("coinsCount") int coinsCount,
+                               @QueryParam("imageUrl") String imageUrl){
+        String result =  UserManagementService.getInstance().sendEmail(from,to,message,coinsCount,imageUrl);
+        return Response.status(200).entity(result).header("Access-Control-Allow-Origin", "*").build();
     }
     
     

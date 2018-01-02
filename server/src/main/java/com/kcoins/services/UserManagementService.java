@@ -1,11 +1,10 @@
 package com.kcoins.services;
 
 import com.kcoins.data.entities.User;
+import com.kcoins.mail.MailService;
 import com.sun.jersey.api.NotFoundException;
 import org.apache.log4j.LogManager;
 import org.apache.log4j.Logger;
-import org.bson.types.ObjectId;
-import org.mongodb.morphia.mapping.Mapper;
 
 public class UserManagementService {
 
@@ -42,7 +41,17 @@ public class UserManagementService {
         return  null;
     }
 
-    public Boolean sendEmail(String from, String to, String message, int coinsCount, String imageUrl) {
-        return null;
+    public String sendEmail(String from, String to, String message, int coinsCount, String imageUrl) {
+        String html = getEmailHtml(from, to, message, coinsCount, imageUrl);
+        String dummyHtml = "<div> test</div>";
+
+        return MailService.getInstance().sendMail("Congratulation you WON kenshoo trophy","kenshoo trophy",dummyHtml,to);
     }
+
+    public static void main(String [] args){
+        String result = UserManagementService.getInstance().sendEmail("atara.tenne@kenshoo.com","atara.tenne@kenshoo.com","hackaton test",5,"www.imageUrl.com");
+        System.out.println("aa");
+    }
+
+
 }
