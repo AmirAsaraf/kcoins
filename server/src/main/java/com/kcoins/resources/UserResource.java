@@ -2,6 +2,8 @@ package com.kcoins.resources;
 
 import com.kcoins.data.entities.User;
 import com.kcoins.services.UserManagementService;
+import com.kcoins.services.UserTrophyInfo;
+import com.kcoins.services.UserTrophyManager;
 import com.kcoins.utils.CorsGenerator;
 import com.sun.jersey.api.NotFoundException;
 import org.apache.log4j.LogManager;
@@ -90,15 +92,25 @@ public class UserResource {
         }
     }
 
-    @PUT
+    @POST
     @Path("/email")
     @Produces(MediaType.APPLICATION_JSON)
     public Response  sendEmail(@QueryParam("from") String from,
                                @QueryParam("to") String to,
                                @QueryParam("message") String message,
                                @QueryParam("coinsCount") int coinsCount,
+                               @QueryParam("trophyType") String trophyType,
                                @QueryParam("imageUrl") String imageUrl){
-        String result =  UserManagementService.getInstance().sendEmail(from,to,message,coinsCount,imageUrl);
+        String result =  UserManagementService.getInstance().sendEmail(from,to,message,coinsCount,trophyType,imageUrl);
+        return Response.status(200).entity(result).header("Access-Control-Allow-Origin", "*").build();
+    }
+
+
+    @GET
+    @Path("/user")
+    @Produces(MediaType.APPLICATION_JSON)
+    public Response  getUserStatus(@QueryParam("userEmail") String userEmail){
+        UserTrophyInfo result =  UserTrophyManager.getInstance().getUserTrophies(userEmail);
         return Response.status(200).entity(result).header("Access-Control-Allow-Origin", "*").build();
     }
     
