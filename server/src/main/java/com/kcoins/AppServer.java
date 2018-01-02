@@ -13,7 +13,7 @@ public class AppServer {
     static final Logger logger = LogManager.getLogger(AppServer.class.getName());
 
     public static final String SERVER_PORT = "server.port";
-    public static final String WEB_XML = "../../../WEB-INF/web.xml";
+    public static final String WEB_XML = "WEB-INF/web.xml";
     public static final String RESOURCE_BASE = "web";
 
     public static void main(String[] args) throws Exception {
