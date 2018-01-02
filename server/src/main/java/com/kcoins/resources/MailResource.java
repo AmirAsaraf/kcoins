@@ -32,15 +32,15 @@ public class MailResource {
     public Response  sendEmail(@QueryParam("from") String from,
                                @QueryParam("to") String to,
                                @QueryParam("message") String message,
-                               @QueryParam("coinsCount") int coinsCount,
+                               @QueryParam("coinsCount") String coinsCount,
                                @QueryParam("trophyType") String trophyType,
                                @QueryParam("imageUrl") String imageUrl){
 
         String [] recipients = new String[1];
-        recipients[0] = "amir.asaraf@gmail.com";
+        recipients[0] = to;
 
-        //String result = UserManagementService.getInstance().sendEmail("Amir Asaraf", recipients, "This is the message");
+        String result = UserManagementService.getInstance().sendEmail(from, recipients, message, coinsCount);
 
-        return Response.status(200).entity("").header("Access-Control-Allow-Origin", "*").build();
+        return Response.status(200).entity(result).header("Access-Control-Allow-Origin", "*").build();
     }
 }
