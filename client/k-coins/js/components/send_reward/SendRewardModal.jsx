@@ -6,7 +6,7 @@ import FlatButton from 'material-ui/FlatButton';
 import RaisedButton from 'material-ui/RaisedButton';
 import DatePicker from 'material-ui/DatePicker';
 import {FloatingActionButton} from "material-ui";
-import {ActionThumbUp, ContentAdd} from "material-ui/svg-icons/index";
+import {ActionThumbUp} from "material-ui/svg-icons/index";
 
 const style = {
     position: "absolute",

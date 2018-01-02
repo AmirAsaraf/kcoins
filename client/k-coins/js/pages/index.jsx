@@ -19,10 +19,6 @@ class Index extends React.Component {
           <Col xs={12}>
             <MyCard title={`Welcome!`}/>
             <MyCard title={`Welcome!`}/>
-            <MyCard title={`Welcome!`}/>
-          </Col>
-          <Col xs={12}>
-            { this.props.children }
           </Col>
         </Row>
       </Grid>
