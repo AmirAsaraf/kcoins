@@ -13,6 +13,7 @@ const styles = {
         display: 'flex',
         flexWrap: 'nowrap',
         overflowX: 'auto',
+        height: 200
     },
     titleStyle: {
         color: 'rgb(0, 188, 212)',
@@ -43,39 +44,51 @@ class TrophySelector extends React.Component {
                 <GridList style={styles.gridList} cols={2.2}>
                     <GridTile
                         key="1"
-                        title="World Saver"
+                        title="Company Master"
                         titleBackground="linear-gradient(to top, rgba(0,0,0,0.7) 0%,rgba(0,0,0,0.3) 70%,rgba(0,0,0,0) 100%)">
-                        <img src={require('../../../img/trophy_1.png')}/>
+                        <img src={require('../../../img/company_master.png')}/>
                     </GridTile>
                     <GridTile
                         key="2"
-                        title="Peace Breaker"
+                        title="Build Breaker"
                         titleBackground="linear-gradient(to top, rgba(0,0,0,0.7) 0%,rgba(0,0,0,0.3) 70%,rgba(0,0,0,0) 100%)">
-                        <img src={require('../../../img/trophy_2.png')}/>
+                        <img src={require('../../../img/broke_the_build.png')}/>
                     </GridTile>
                     <GridTile
                         key="3"
-                        title="World Saver"
+                        title="Bugs Terminator"
+                        titleBackground="linear-gradient(to top, rgba(0,0,0,0.7) 0%,rgba(0,0,0,0.3) 70%,rgba(0,0,0,0) 100%)">
+                        <img src={require('../../../img/bugs_terminator2.png')}/>
+                    </GridTile>
+                    <GridTile
+                        key="4"
+                        title="Not your best code"
+                        titleBackground="linear-gradient(to top, rgba(0,0,0,0.7) 0%,rgba(0,0,0,0.3) 70%,rgba(0,0,0,0) 100%)">
+                        <img src={require('../../../img/not_your_best_code2.png')}/>
+                    </GridTile>
+                    <GridTile
+                        key="5"
+                        title="Clean Coder"
+                        titleBackground="linear-gradient(to top, rgba(0,0,0,0.7) 0%,rgba(0,0,0,0.3) 70%,rgba(0,0,0,0) 100%)">
+                        <img src={require('../../../img/code_without_bugs.png')}/>
+                    </GridTile>
+                    <GridTile
+                        key="6"
+                        title="Best Haircut"
                         titleBackground="linear-gradient(to top, rgba(0,0,0,0.7) 0%,rgba(0,0,0,0.3) 70%,rgba(0,0,0,0) 100%)">
                         <img src={require('../../../img/trophy_3.png')}/>
                     </GridTile>
                     <GridTile
-                        key="3"
+                        key="7"
                         title="World Saver"
                         titleBackground="linear-gradient(to top, rgba(0,0,0,0.7) 0%,rgba(0,0,0,0.3) 70%,rgba(0,0,0,0) 100%)">
                         <img src={require('../../../img/trophy_1.png')}/>
                     </GridTile>
                     <GridTile
-                        key="4"
+                        key="8"
                         title="Peace Breaker"
                         titleBackground="linear-gradient(to top, rgba(0,0,0,0.7) 0%,rgba(0,0,0,0.3) 70%,rgba(0,0,0,0) 100%)">
                         <img src={require('../../../img/trophy_2.png')}/>
-                    </GridTile>
-                    <GridTile
-                        key="5"
-                        title="World Saver"
-                        titleBackground="linear-gradient(to top, rgba(0,0,0,0.7) 0%,rgba(0,0,0,0.3) 70%,rgba(0,0,0,0) 100%)">
-                        <img src={require('../../../img/trophy_3.png')}/>
                     </GridTile>
                 </GridList>
             </div>

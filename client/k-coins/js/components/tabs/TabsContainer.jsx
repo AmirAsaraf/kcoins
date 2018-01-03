@@ -28,15 +28,6 @@ class TabsContainer extends React.Component {
                     <LatestRewardCard to="Kim Jong-un" trophyTitle="Peace Breaker"
                                       message="Stop breaking the master peace branch. Please run tests before you push"
                                       trophyIndex="2"/>
-                    <LatestRewardCard to="Kim Jong-un" trophyTitle="Peace Breaker"
-                                      message="Stop breaking the master peace branch. Please run tests before you push"
-                                      trophyIndex="3"/>
-                    <LatestRewardCard to="Kim Jong-un" trophyTitle="Peace Breaker"
-                                      message="Stop breaking the master peace branch. Please run tests before you push"
-                                      trophyIndex="2"/>
-                    <LatestRewardCard to="Kim Jong-un" trophyTitle="Peace Breaker"
-                                      message="Stop breaking the master peace branch. Please run tests before you push"
-                                      trophyIndex="3"/>
                 </Tab>
                 <Tab
                     icon={<MapsLocalActivity />}
