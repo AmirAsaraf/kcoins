@@ -7,6 +7,11 @@ import org.apache.log4j.LogManager;
 import org.apache.log4j.Logger;
 
 import java.io.File;
+import java.io.IOException;
+import org.jsoup.Jsoup;
+import org.jsoup.nodes.Document;
+import org.jsoup.nodes.Element;
+import org.jsoup.safety.Whitelist;
 
 public class UserManagementService {
 
@@ -41,31 +46,30 @@ public class UserManagementService {
     }
 
 
-//    public String getEmailHtml(String from, String to, String message, int coinsCount, String imageUrl) {
-//        try{
-//
-//            File file = new File("mail_preview.html");
-//            Document doc = Jsoup.parse(file, "UTF-8", "");
-//            Element dummy_to = doc.getElementById("to");
-//            dummy_to.text(to);
-//            Element dummy_from = doc.getElementById("from");
-//            dummy_from.text(from);
-//            Element dummy_msg = doc.getElementById("message");
-//            dummy_msg.text(message);
-//            String congrats = "Congratulations!!!! You won " + coinsCount +" Kcoins";
-//            Element dummy_Kcoins = doc.getElementById("kcoins");
-//            dummy_Kcoins.text(congrats);
-//            Element dummy_img_url = doc.getElementById("img");
-//            dummy_img_url.attr("src", imageUrl);
-//            String safe = Jsoup.clean(doc.outerHtml(), Whitelist.basic());
-//            return safe;
-//        }
-//        catch (IOException ex)
-//        {
-//            return ex.getMessage();
-//        }
-//    }
+    public String getEmailHtml(String from, String to, String message, int coinsCount, String imageUrl) {
+        try{
 
+            File file = new File("mail_preview.html");
+            Document doc = Jsoup.parse(file, "UTF-8", "");
+            Element dummy_to = doc.getElementById("to");
+            dummy_to.text(to);
+            Element dummy_from = doc.getElementById("from");
+            dummy_from.text(from);
+            Element dummy_msg = doc.getElementById("message");
+            dummy_msg.text(message);
+            String congrats = "Congratulations!!!! You won " + coinsCount +" Kcoins";
+            Element dummy_Kcoins = doc.getElementById("kcoins");
+            dummy_Kcoins.text(congrats);
+            Element dummy_img_url = doc.getElementById("img");
+            dummy_img_url.attr("src", imageUrl);
+            String safe = Jsoup.clean(doc.outerHtml(), Whitelist.basic());
+            return safe;
+        }
+        catch (IOException ex)
+        {
+            return ex.getMessage();
+        }
+    }
 
     public String sendEmail(String from, String[] to, String message, String coins) {
         String html = MailTemplate.MAIL_TEMPLATE
