@@ -6,8 +6,7 @@ import {Card} from "material-ui";
 const style = {};
 
 const card_media_style = {
-    width: 60,
-    height: 60
+    textAlign: "center"
 };
 
 const reward_card_style = {
@@ -32,14 +31,16 @@ class LatestRewardCard extends React.Component {
 
     render() {
 
-        const {to, trophyTitle, message, trophyIndex } = this.props;
+        const {to, trophyTitle, message, trophyIndex, imageSource} = this.props;
 
-        let imageSource = 'http://dogdayzz.com/images/theme-none/awards/' + trophyIndex + '.png';
+        //let imageSource = 'http://dogdayzz.com/images/theme-none/awards/' + trophyIndex + '.png';
 
         const cardData = (
             <div style={reward_card_style}>
                 <div style={image_container_style}>
-                    <img src={imageSource} alt=""/>
+                    <div style={card_media_style}>
+                        <img src={imageSource} width="80" height="80"/>
+                    </div>
                     <div>{trophyTitle}</div>
                 </div>
                 <div style={message_style}><b>{to}</b> has been rewarded! <i>"{message}"</i></div>
